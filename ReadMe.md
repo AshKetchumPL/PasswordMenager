@@ -30,6 +30,5 @@ Adding new password
 ## Instructions
 
 1.  `go mod tidy`
-2.  `go get github.com/akavel/rsrc` (optional)
-3.  `rsrc -ico ./images/icon.ico` (optional)
-4.  `go mod build .`
+2.  `go run github.com/akavel/rsrc -ico ./images/icon.ico` (optional)
+3.  `go mod build .`
