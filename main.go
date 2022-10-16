@@ -84,10 +84,13 @@ func init() {
 			var password string
 			Green.Print("Enter Name > ")
 			fmt.Scanln(&name)
+
 			Cyan.Print("Enter Login > ")
 			fmt.Scanln(&login)
-			Cyan.Print("Enter Domain > ")
+
+			Green.Print("Enter Domain > ")
 			fmt.Scanln(&domain)
+
 			Red.Print("Enter Password > ")
 			fmt.Scanln(&password)
 			passwords = append(passwords, Password{
@@ -96,20 +99,8 @@ func init() {
 				Domain:   domain,
 				Password: password,
 			})
-			Cyan.Println("Password saved in ram (type \"save\" to save in file)")
-
-			return 0
-		},
-		Implemented: true,
-	})
-	commands = append(commands, Command{
-		Name:        "save",
-		Description: "Save added/removes deleted passwords",
-		Func: func() int {
-			Green := color.New(color.FgGreen)
-			Green.Println("Saving...")
+			Cyan.Println("Password saved")
 			save()
-			Green.Println("Saved!")
 			return 0
 		},
 		Implemented: true,
