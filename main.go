@@ -16,7 +16,7 @@ import (
 // - Add support for Encryption
 
 var (
-	version = "0.0.0"
+	version = "v0.0.0"
 	dev     = false
 )
 
