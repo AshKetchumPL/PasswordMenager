@@ -18,20 +18,16 @@ Adding new password
 
 ![Showcase Of Adding passowrd](images/showcase2.png)
 
-### TODO:
+#### PROJECT ARCHIVED
+### ~~TODO:~~
+-   ~~File Encryption~~
+-   ~~more commands~~
 
--   File Encryption
--   more commands
 
 ## Building
-
-### Requirements
-
--   go 1.19.2
-
-## Instructions
-
 1.  `go mod tidy`
 2.  `go mod build .`
+### Requirements
+-   go 1.19.2
 
-user_616397
+

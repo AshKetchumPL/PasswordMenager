@@ -16,7 +16,7 @@ import (
 // - Add support for Encryption
 
 var (
-	version = "v0.0.0"
+	version = "v0.0.1"
 	dev     = false
 )
 
@@ -185,7 +185,7 @@ func init() {
 			Red, Green, Cyan := color.New(color.FgRed), color.New(color.FgGreen), color.New(color.FgCyan)
 
 			Green.Print("Github: ")
-			Cyan.Print("github.com/AshKetchumPL/")
+			Cyan.Print("github.com/pawelk1337/")
 			Red.Println("PasswordMenager")
 
 			fmt.Println()
@@ -202,7 +202,7 @@ func init() {
 			Cyan.Println("This Password Menager was created for fun just to get some knowledge of programing")
 
 			Green.Print("Made with: ")
-			Cyan.Print("sweat, tears")
+			Cyan.Print("love")
 			Green.Print(" and ")
 			Cyan.Print("go")
 			Green.Println(" (language)")
@@ -210,9 +210,9 @@ func init() {
 			fmt.Println()
 
 			Green.Print("Author: ")
-			Cyan.Println("AshKetchumPL")
-			Green.Print("Discord: ")
-			Cyan.Println(">>ash ketchum<<#6595")
+			Cyan.Println("PawelK1337")
+			Green.Print("Github: ")
+			Cyan.Println("github.com/pawelk1337")
 			return 0
 		},
 		Implemented: true,
@@ -232,13 +232,13 @@ func main() {
 	Red, Green, Cyan, Yellow := color.New(color.FgRed), color.New(color.FgGreen), color.New(color.FgCyan), color.New(color.FgYellow)
 
 	Green.Print("# ")
-	Cyan.Print("github.com/AshKetchumPL/")
-	Red.Println("PasswordMenager")
+	Cyan.Print("github.com/pawelk1337/")
+	Yellow.Println("PasswordMenager")
 
 	if _, err := os.Stat("./Password Menager"); os.IsNotExist(err) {
 		setup()
 	}
-	jsonFile, err := os.Open("./Password Menager/passwords.apm")
+	jsonFile, err := os.Open("./Password Menager/passwords.pm")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -286,11 +286,11 @@ func setup() {
 	}
 	data := []Password{}
 	file, _ := json.MarshalIndent(data, "", "	")
-	_ = ioutil.WriteFile("./Password Menager/passwords.apm", file, 0644)
+	_ = ioutil.WriteFile("./Password Menager/passwords.pm", file, 0644)
 	Green.Println("Setup Complete")
 }
 
 func save() {
 	file, _ := json.MarshalIndent(passwords, "", "	")
-	_ = ioutil.WriteFile("./Password Menager/passwords.apm", file, 0644)
+	_ = ioutil.WriteFile("./Password Menager/passwords.pm", file, 0644)
 }
